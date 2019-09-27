@@ -55,32 +55,33 @@
   };
 </script>
 
-  <meta name="description" content="Nothing in impossible">
+  <meta name="description" content="1、kafka中的基本概念1)broker:一个独立的kafka服务器称为一个broker 2)集群:多个broker组成一个kafka集群 3)消息(Message):kafka中的数据单元，通过&amp;lt;topic partition offset&amp;gt; 三元组可以找到在kafka中唯一对应的一条消息 4)批次:消息被分批次写入kafka，批次就是一组消息 5)副本(replica):冗余机制">
 <meta name="keywords" content="big data">
-<meta property="og:type" content="website">
-<meta property="og:title" content="lmy的技术专栏">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kafka">
+<meta property="og:url" content="http://yoursite.com/2019/09/27/Kafka/index.html">
 <meta property="og:site_name" content="lmy的技术专栏">
-<meta property="og:description" content="Nothing in impossible">
+<meta property="og:description" content="1、kafka中的基本概念1)broker:一个独立的kafka服务器称为一个broker 2)集群:多个broker组成一个kafka集群 3)消息(Message):kafka中的数据单元，通过&amp;lt;topic partition offset&amp;gt; 三元组可以找到在kafka中唯一对应的一条消息 4)批次:消息被分批次写入kafka，批次就是一组消息 5)副本(replica):冗余机制">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-27T09:03:20.244Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="lmy的技术专栏">
-<meta name="twitter:description" content="Nothing in impossible">
-  <link rel="canonical" href="http://yoursite.com/">
+<meta name="twitter:title" content="Kafka">
+<meta name="twitter:description" content="1、kafka中的基本概念1)broker:一个独立的kafka服务器称为一个broker 2)集群:多个broker组成一个kafka集群 3)消息(Message):kafka中的数据单元，通过&amp;lt;topic partition offset&amp;gt; 三元组可以找到在kafka中唯一对应的一条消息 4)批次:消息被分批次写入kafka，批次就是一组消息 5)副本(replica):冗余机制">
+  <link rel="canonical" href="http://yoursite.com/2019/09/27/Kafka/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
+    isHome: false,
+    isPost: true,
     isPage: false,
     isArchive: false
   };
 </script>
 
-  <title>lmy的技术专栏</title>
+  <title>Kafka | lmy的技术专栏</title>
   
 
 
@@ -190,12 +191,13 @@
 
           <div id="content" class="content">
             
+
   <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
+  <div class="post-block post">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/27/Kafka/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -208,9 +210,8 @@
       <meta itemprop="name" content="lmy的技术专栏">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/27/Kafka/" class="post-title-link" itemprop="url">Kafka</a>
+        <h1 class="post-title" itemprop="name headline">Kafka
+
           
         </h1>
 
@@ -244,7 +245,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="1、kafka中的基本概念"><a href="#1、kafka中的基本概念" class="headerlink" title="1、kafka中的基本概念"></a>1、kafka中的基本概念</h2><pre><code>1)broker:一个独立的kafka服务器称为一个broker
+        <h2 id="1、kafka中的基本概念"><a href="#1、kafka中的基本概念" class="headerlink" title="1、kafka中的基本概念"></a>1、kafka中的基本概念</h2><pre><code>1)broker:一个独立的kafka服务器称为一个broker
 2)集群:多个broker组成一个kafka集群
 3)消息(Message):kafka中的数据单元，通过&lt;topic partition offset&gt; 三元组可以找到在kafka中唯一对应的一条消息
 4)批次:消息被分批次写入kafka，批次就是一组消息
@@ -400,27 +401,27 @@ Kafka消费者经常会做一些高延迟的操作，比如把数据写到数据
 1.group.id属性，它指定了消费者所属群组的名字
 2.消费者根据消费者群组id来唯一区分和隔离
 3.如果多个消费者进程属于同一个消费群组（groupid）他们之间不会重复消费数据</code></pre>
-        
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-          <div class="post-eof"></div>
         
+      
+
+      <footer class="post-footer">
+
+        
+
       </footer>
+    
   </div>
   
   
   
   </article>
 
-    
   </div>
-
-  
 
 
           </div>
@@ -439,6 +440,11 @@ Kafka消费者经常会做一些高延迟的操作，比如把数据写到数据
 
   <aside class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -451,6 +457,8 @@ Kafka消费者经常会做一些高延迟的操作，比如把数据写到数据
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、kafka中的基本概念"><span class="nav-number">1.</span> <span class="nav-text">1、kafka中的基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、消息复制与分区"><span class="nav-number">2.</span> <span class="nav-text">2、消息复制与分区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、数据清理"><span class="nav-number">3.</span> <span class="nav-text">3、数据清理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、Kafka的高性能"><span class="nav-number">4.</span> <span class="nav-text">4、Kafka的高性能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、kafka的配置文件详解"><span class="nav-number">5.</span> <span class="nav-text">5、kafka的配置文件详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、kafka的命令行操作"><span class="nav-number">6.</span> <span class="nav-text">6、kafka的命令行操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、kafka生产者"><span class="nav-number">7.</span> <span class="nav-text">7、kafka生产者</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、kafka消费者"><span class="nav-number">8.</span> <span class="nav-text">8、kafka消费者</span></a></li></ol></div>
+        
       </div>
       <!--/noindex-->
 
