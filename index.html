@@ -245,10 +245,16 @@
 
       
           <h2 id="1、李嘟嘟的外号"><a href="#1、李嘟嘟的外号" class="headerlink" title="1、李嘟嘟的外号"></a>1、李嘟嘟的外号</h2><pre><code>小胖胖、李肥肥、李嘟嘟、圆滚滚、滚嘟嘟、傻乎乎。。。。。。。。。。。。。</code></pre><h2 id="2、李嘟嘟爱吃的东西"><a href="#2、李嘟嘟爱吃的东西" class="headerlink" title="2、李嘟嘟爱吃的东西"></a>2、李嘟嘟爱吃的东西</h2><pre><code>肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉
-奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶</code></pre><h2 id="3、李嘟嘟爱买的东西"><a href="#3、李嘟嘟爱买的东西" class="headerlink" title="3、李嘟嘟爱买的东西"></a>3、李嘟嘟爱买的东西</h2><pre><code>肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉肉
-奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶
-锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅锅
-花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花花</code></pre><h2 id="4、李嘟嘟的口头禅"><a href="#4、李嘟嘟的口头禅" class="headerlink" title="4、李嘟嘟的口头禅"></a>4、李嘟嘟的口头禅</h2><pre><code>妈卖批，弄死你信不信，过来！ 傻乎乎的 </code></pre><h2 id="5、李嘟嘟的日常"><a href="#5、李嘟嘟的日常" class="headerlink" title="5、李嘟嘟的日常"></a>5、李嘟嘟的日常</h2><pre><code>躺床上滚来滚去滚来滚去</code></pre><h2 id="嘟嘟嘟嘟，回去不要打我喔！！！！"><a href="#嘟嘟嘟嘟，回去不要打我喔！！！！" class="headerlink" title="嘟嘟嘟嘟，回去不要打我喔！！！！"></a>嘟嘟嘟嘟，回去不要打我喔！！！！</h2>
+奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶奶茶</code></pre>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/09/27/李嘟嘟的个人简介/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -330,152 +336,16 @@
 8)主题(topic):不同的主题，类比MySql数据库中的不同表格
 9)分区(partition):一个主题的消息可以设置多个分区
 10)生产者(producer):消息创建，消息的输入
-11)消费者(consumer):消息读取，消息的输出</code></pre><h2 id="2、消息复制与分区"><a href="#2、消息复制与分区" class="headerlink" title="2、消息复制与分区"></a>2、消息复制与分区</h2><pre><code>1)一个主题可以包含多个分区。kafka无法在整个主题范围内保证消息的顺序，但可以保证消息在单个分区内的顺序
-2)kafka在物理上把topic分成一个或多个patition，每个partition在物理上对应一个文件夹，该文件夹下存储这个partition的所有消息和索引文件
-3)kafka通过分区设计可以实现数据冗余和伸缩，分区可以分布在不同的服务器上，以此为高并发提供可能
-4)消息复制指的是每个分区都可能会有一个或者多个副本，其中一个副本会被推选为领袖节点，其余的落选为从节点。其中领袖节点将会跟踪与其同步的副本列表，该列表称为ISR(In-Sync Replica)
-5)kafka默认提供了leader选举算法，可以在集群的所有机器上以均等的机会分散各个分区的leader节点，从而整体上实现了负载均衡
-6)kafka保证同一个分区的多个副本一定不会分配在同一台物理机上</code></pre><h2 id="3、数据清理"><a href="#3、数据清理" class="headerlink" title="3、数据清理"></a>3、数据清理</h2><pre><code>1)对于kafka来说，磁盘是最重要的子系统。所有的消息都保存在磁盘上，所以kafka的性能严重依赖磁盘的性能
-2)对于超过时间周期的数据，kafka会对其进行清理</code></pre><h2 id="4、Kafka的高性能"><a href="#4、Kafka的高性能" class="headerlink" title="4、Kafka的高性能"></a>4、Kafka的高性能</h2><pre><code>1)kafka大量使用操作系统页缓存，内存操作速度快且命中率高
-2)kafka不直接参与物理I/O操作，而是交由最擅长此事的操作系统来完成
-3)采用追加写入方式，摒弃了缓慢的磁盘随机读写操作
-4)使用以sendfile为代表的零拷贝技术加强了网络间的数据传输效率</code></pre><h2 id="5、kafka的配置文件详解"><a href="#5、kafka的配置文件详解" class="headerlink" title="5、kafka的配置文件详解"></a>5、kafka的配置文件详解</h2><pre><code>Kafka中一共有四类配置，分别如下：
-1) broker configs：server.properties（主要）
-2) zookeeper configs：zookeeper.properties（主要）
-3) consumer configs ：consumer.properties（生产者配置文件）
-4) producer configs：producer.properties（消费者配置文件）
-其中broker和zookeeper是主要的配置文件
-
-Kafka的配置文件
-Kafka的配置文件对应名称为：server.properties，其示例及字段解释如下：
-1 broker.id=0 # 用唯一的数字进行区分实例，从0开始
-2 host.name=99.99.99.99 #本机的IP地址
-3 zookeeper.connect=99.99.99.99:2181,99.99.99.98:2181,99.99.99.97:2181 # Zookeeper的集群地址
-4 log.dirs=/ssd1/kafka-logs-1,/ssd2/kafka-logs-2,/ssd3/kafka-logs-3 # 数据存放地址
-5 num.network.threads=24 # broker处理消息的线程数
-6 num.io.threads=60 # broker处理磁盘IO的线程数
-7 socket.send.buffer.bytes=102400
-8 socket.receive.buffer.bytes=102400
-9 socket.request.max.bytes=104857600
-10 num.partitions=3 # 创建topic时的默认分区数
-11 num.recovery.threads.per.data.dir=8
-12 offsets.topic.replication.factor=3
-13 transaction.state.log.replication.factor=3
-14 transaction.state.log.min.isr=3
-15 log.retention.hours=96 # 日志保留时间为四天
-16 log.segment.bytes=107374182
-17 log.retention.check.interval.ms=300000 # 文件大小检查时间周期
-18 zookeeper.connection.timeout.ms=6000 # zookeeper的心跳时间间隔
-19 group.initial.rebalance.delay.ms=3
-20
-21  新增修改的配置
-22 auto.create.topics.enable=false   # 不允许自动创建Topic
-23 auto.leader.rebalance.enable=true   # 允许自动平衡数据
-24 background.threads=15 # 后台任务的线程数
-25 delete.topic.enable=true # 允许通过客户端删除topic
-26 leader.imbalance.check.interval.seconds=300 # 检查leader是否不平衡的时间间隔，5分钟检查一次
-27 leader.imbalance.per.broker.percentage=10 # leader的不平衡比例，如果超过这个比例，会对分区进行重新平衡
-28 default.replication.factor=2 # 创建Topic时的默认副本数，表示一份数据，有两份
-29 controlled.shutdown.enable=true # 优雅的重启，关闭一台机器的时候将leader转移到其他机器
-
-其中对于磁盘容量的规划与以下因素有关：
-•新增消息数
-•消息留存时间
-•平均消息大小
-•副本数
-•是否启动压缩
-
-ZooKeeper的配置文件
-ZooKeeper的配置文件对应名称为：zookeeper.properties，其示例及字段解释如下：
-1 dataDir=/ssd1/zookeeper # 数据存储目录
-2 clientPort=2181 # zookeeper 对外服务的接口
-3 maxClientCnxns=0 # 最大客户端连接数量
-4 tickTime=2000 # 最小时间单元（毫秒）
-5 initLimit=10 # 领袖节点同步最新数据的最长时间，10个时间单元
-6 syncLimit=5 # 心跳机制的时间间隔，5个时间单元
-7 server.1=99.99.99.99:2888:3888 # 第一个端口是主从同步的通信端口，第二个端口是领袖选举的端口
-8 server.2=99.99.99.98:2888:3888
-9 server.3=99.99.99.97:2888:3888</code></pre><h2 id="6、kafka的命令行操作"><a href="#6、kafka的命令行操作" class="headerlink" title="6、kafka的命令行操作"></a>6、kafka的命令行操作</h2><pre><code> 1 创建一个副本数为1，分区数为3的Topic，名称为test
- 2 bin/kafka-topics.sh --create --zookeeper 99.99.99.99:2181 --replication-factor 1 --partitions 3 --topic test
- 3
- 4  创建一个副本数为1，分区数为3，日志保留6小时的Topic，名称为test2
- 5 bin/kafka-topics.sh --create --zookeeper 99.99.99.99:2181 --replication-factor 1 --partitions 3 --topic test --config  delete.retention.ms=21600000
- 6
- 7 删除Topic
- 8 bin/kafka-topics.sh --delete --zookeeper 99.99.99.99:2181 --topic test
- 9
-10 查看指定Topic的所有信息
-11 bin/kafka-topics.sh --describe --zookeeper 99.99.99.99:2181 --topic test 
-12
-13 列出所有的Topic
-14 注意Zookeeper后面的IP地址可以写集群里面任一Zookeeper的地址和端口
-15  bin/kafka-topics.sh --list --zookeeper 99.99.99.99:2181
-
-producer和consumer客户端使用示例
-producer -&gt; bin/kafka-console-producer.sh --broker-list 99.99.99.99:9092 --topic test
-consumer -&gt; bin/kafka-console-consumer.sh --bootstrap-server 99.99.99.99:9092 --topic test --from-beginning
-这些所有Kafka脚本工具虽然实现了各自不同的功能，但底层都是使用kafka-run-class.sh脚本来实现的
-
-列出所有的consumer -&gt; bin/kafka-consumer-groups.sh --bootstrap-server 99.99.99.99:9092 --list
-查看分区里面的最新消息
-注意这里写机器的IP地址和域名都可以,查看指定Topic，指定分区的最新消息。
-bin/kafka-console-consumer.sh --bootstrap-server 99.99.99.99:9092 --topic test --offset latest --partition 0
-
-producer吞吐量测试
-bin/kafka-producer-perf-test.sh --num-records 100000 --topic test --producer-props bootstrap.servers=99.99.99.99:9092,99.99.99.98:9092,99.99.99.97:9092 --throughput 5000 --record-size 102400 --print-metrics
-consumer吞吐量测试
-bin/kafka-consumer-perf-test.sh --topic test --messages 100000 --num-fetch-threads 10 --threads 10 --broker-list 99.99.99.99:9092,99.99.99.98:9092,99.99.99.97:9092 --group perf-consumer-30108</code></pre><h2 id="7、kafka生产者"><a href="#7、kafka生产者" class="headerlink" title="7、kafka生产者"></a>7、kafka生产者</h2><pre><code>消息发送机制有以下三种：
-1.发送并忘记：发送消息，但不关心它是否真正到达
-2.同步发送：阻塞发送确保消息到达
-3.异步发送：非阻塞发送，不一定确保消息达到，但有重试机制
-
-其中消息发送中的键有两个用途：
-1.可以作为消息的附加信息
-2.可以用来决定消息该被写入到主题的哪个分区（hash指定），拥有相同键的消息将被写到同一个分区
-
-producer的python代码示例
-
- 1 import time
- 2 import json
- 3
- 4 from kafka import KafkaProducer
- 5
- 6 producer = KafkaProducer(bootstrap_servers=[&quot;99.99.99.99:9092&quot;,&quot;99.99.99.98:9092&quot;,&quot;99.99.99.97:9092&quot;], retries=5, client_id=&quot;1&quot;, acks=1)
- 7
- 8 topic = &quot;test&quot;
- 9
-10 for number in range(100):
-11    time.sleep(1)
-12    message = &quot;Hello {0}&quot;.format(number)
-13    future = producer.send(topic,  json.dumps(message).encode(&apos;utf-8&apos;))
-14    result = future.get(timeout=10)
-15    print (result.topic)
-16    print (result.partition)
-17    print (result.offset)
-
-以上Kafka生产者中，有几个重要参数，说明如下：
-1.acks参数制定了必须要有多少个分区副本收到消息，生产者才会认为消息写入是成功的
-2.buffer.memory设置生产者内存缓冲区的大小
-3.comperssion.type指定消息压缩方式
-4.retries重试机制
-5.batch.size每一批次发送消息的大小</code></pre><h2 id="8、kafka消费者"><a href="#8、kafka消费者" class="headerlink" title="8、kafka消费者"></a>8、kafka消费者</h2><pre><code>1)消费者和消费者群组
-Kafka消费者经常会做一些高延迟的操作，比如把数据写到数据库或HDFS，或者使用数据进行比较耗时的计算。在这些情况下，单个消费者无法跟上数据生成的速度，所以可以增加更多的消费者，让它们分担负载，每个消费者只处理部分分区的消息。我们有必要为主题创建大量的分区，在负载增长时可以加入更多的消费者。不过不要让消费者的数量超过主题分区的数量
-
-消费者Python代码示例
-1 from kafka import KafkaConsumer
-2
-3 import time
-4
-5 topic = &quot;test&quot;
-6 consumer = KafkaConsumer(topic, group_id=&quot;consumer1&quot;, client_id=&quot;2&quot;, bootstrap_servers=[&quot;99.99.99.99:9092&quot;,&quot;99.99.99.98:9092&quot;,&quot;99.99.99.97:9092&quot;])
-7
-8 for message in consumer:
-9    print (message.topic, message.partition, message.offset, message.key, message.value)
-
-以上Kafka消费者中，有几个重要参数，说明如下：
-1.group.id属性，它指定了消费者所属群组的名字
-2.消费者根据消费者群组id来唯一区分和隔离
-3.如果多个消费者进程属于同一个消费群组（groupid）他们之间不会重复消费数据</code></pre>
+11)消费者(consumer):消息读取，消息的输出</code></pre>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/09/27/Kafka/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
